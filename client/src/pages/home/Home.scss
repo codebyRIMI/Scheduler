@@ -1,0 +1,83 @@
+.home {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: rgb(244, 117, 117);
+  margin: 10px 10px;
+  border-radius: 5px;
+  height: 91%;
+  h1 {
+    text-align: center;
+    color: #333;
+  }
+  .scheduled-text {
+    font-size: 0.9rem;
+    color: rgb(25, 130, 4);
+    text-align: center;
+    border-radius: 40px;
+    margin-top: 2px;
+    font-weight:bolder;
+  }
+
+  
+  .calendar-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  /* Custom styles for the calendar */
+  .react-calendar {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    width: auto;
+  
+
+    /* Customize the tiles (the days) */
+    .react-calendar__tile {
+      border-radius: 50%;
+      font-size: 16px;
+      color: #333;
+      transition: background-color 0.3s, color 0.3s;
+
+      /* Hover effect for the tiles */
+      &:hover {
+        background-color: #f15e5e;
+        color: #fff;
+      }
+
+      /* Active tile */
+      &.react-calendar__tile--active {
+        background-color: #5a0303;
+        color: #fff;
+      }
+
+      /* Disabled tile */
+      &.react-calendar__tile--disabled {
+        color: #b0b0b0;
+        background-color: transparent;
+      }
+    }
+
+    /* Customize the month view */
+    .react-calendar__month-view {
+      padding: 10px;
+    }
+
+    /* Customize the navigation buttons */
+    .react-calendar__navigation button {
+      background-color: #d60707;
+      color: #fff;
+      border: none;
+      padding: 10px;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+
+      &:hover {
+        background-color: #f6f9fb;
+        color:#333;
+      }
+    }
+  }
+}

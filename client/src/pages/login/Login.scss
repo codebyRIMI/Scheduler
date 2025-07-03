@@ -1,0 +1,159 @@
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #820f93, #4d6dee);
+
+  .login_container {
+    background: #ffffff;
+    padding: 50px 40px;
+    border-radius: 20px;
+    width: 400px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    text-align: center;
+
+    h2 {
+      margin-bottom: 10px;
+      color: #820f93;
+      font-size: 32px;
+      font-weight: bold;
+    }
+
+    .subtitle {
+      font-size: 16px;
+      color: #666;
+      margin-bottom: 30px;
+    }
+
+    .login_form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      input {
+        padding: 12px 15px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        font-size: 16px;
+        outline: none;
+        transition: border-color 0.3s, box-shadow 0.3s;
+
+        &:focus {
+          border-color: #820f93;
+          box-shadow: 0 0 8px rgba(130, 15, 147, 0.4);
+        }
+      }
+
+      button {
+        margin-top: 10px;
+        padding: 14px;
+        background-color: #4d6dee;
+        color: white;
+        border: none;
+        border-radius: 10px;
+        font-size: 18px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+          background-color: #353be8;
+        }
+      }
+    }
+
+    .register_link {
+      margin-top: 25px;
+      font-size: 14px;
+      color: #333;
+
+      a {
+        color: #820f93;
+        text-decoration: none;
+        font-weight: bold;
+        margin-left: 5px;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+// Media Queries for responsiveness
+@media (max-width: 768px) {
+  .login {
+    height: auto;
+    padding: 20px;
+  }
+
+  .login_container {
+    width: 90%;
+    padding: 40px 30px;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+
+  .subtitle {
+    font-size: 14px;
+  }
+
+  .login_form {
+    gap: 15px;
+
+    input {
+      font-size: 14px;
+    }
+
+    button {
+      padding: 12px;
+      font-size: 16px;
+    }
+  }
+
+  .register_link {
+    margin-top: 20px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .login {
+    padding: 10px;
+  }
+
+  .login_container {
+    width: 100%;
+    padding: 30px 20px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  .subtitle {
+    font-size: 12px;
+  }
+
+  .login_form {
+    gap: 12px;
+
+    input {
+      font-size: 13px;
+    }
+
+    button {
+      padding: 10px;
+      font-size: 14px;
+    }
+  }
+
+  .register_link {
+    margin-top: 15px;
+    font-size: 12px;
+  }
+}

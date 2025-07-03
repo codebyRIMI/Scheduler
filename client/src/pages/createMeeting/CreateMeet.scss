@@ -1,0 +1,208 @@
+.create-meet {
+  width: 100%;
+  height: calc(100vh - 70px);
+  top: 0px;
+  background: linear-gradient(135deg, #f8f7f4 0%, #fda085 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  overflow-y: auto;
+  overflow: scroll;
+  position: relative;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  .create-container {
+    margin: 40px 10px;
+    background: #fff;
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+
+    h2 {
+      text-align: center;
+      margin-bottom: 25px;
+      color: #333;
+      font-size: 28px;
+    }
+
+    .create-form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+
+      input,
+      select {
+        padding: 10px 10px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        font-size: 16px;
+        outline: none;
+        transition: all 0.3s;
+
+        &:focus {
+          border-color: #f77;
+          box-shadow: 0 0 5px rgba(255, 100, 100, 0.5);
+        }
+      }
+
+      button {
+        padding: 12px;
+        background: #f77;
+        color: #fff;
+        border: none;
+        border-radius: 8px;
+        font-size: 18px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background 0.3s ease;
+
+        &:hover {
+          background: #ff4e50;
+        }
+      }
+
+      .participants-section {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        button {
+          padding: 10px;
+          background: #ddd;
+          color: #333;
+          border: 1px solid #ccc;
+          border-radius: 8px;
+          cursor: pointer;
+          transition: background 0.3s ease;
+
+          &:hover {
+            background: #bbb;
+          }
+        }
+
+        .checkbox-list {
+          display: flex;
+          flex-direction: column;
+          gap: 5px;
+
+          .checkbox-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            input {
+              width: 20px;
+              height: 20px;
+            }
+
+            label {
+              font-size: 16px;
+              color: #333;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Media Queries for responsiveness
+@media (max-width: 768px) {
+  .create-meet {
+    padding: 20px;
+  }
+
+  .create-container {
+    padding: 25px 30px;
+    width: 90%;
+    max-width: 100%;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  .create-form {
+    gap: 12px;
+
+    input,
+    select {
+      font-size: 14px;
+    }
+
+    button {
+      padding: 10px;
+      font-size: 16px;
+    }
+
+    .participants-section button {
+      padding: 8px;
+    }
+
+    .checkbox-item {
+      gap: 8px;
+
+      input {
+        width: 18px;
+        height: 18px;
+      }
+
+      label {
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .create-meet {
+    padding: 15px;
+  }
+
+  .create-container {
+    padding: 20px 25px;
+    width: 100%;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  .create-form {
+    gap: 10px;
+
+    input,
+    select {
+      font-size: 12px;
+    }
+
+    button {
+      padding: 8px;
+      font-size: 14px;
+    }
+
+    .participants-section button {
+      padding: 6px;
+    }
+
+    .checkbox-item {
+      gap: 6px;
+
+      input {
+        width: 16px;
+        height: 16px;
+      }
+
+      label {
+        font-size: 12px;
+      }
+    }
+  }
+}
