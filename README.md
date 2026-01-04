@@ -77,6 +77,8 @@ Example .env:
 - JWT_SECRET=your_secret_key
 - PORT=5000
 
+## 📜 License
+This project is licensed under the MIT License.
 
 ## 👤 Author
 Rimi Halder
